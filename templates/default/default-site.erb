@@ -8,4 +8,11 @@ server {
     root   /var/www/nginx-default;
     index  index.html index.htm;
   }
+  
+        location /static {
+                proxy_pass http://54.226.109.157;
+        }
+        location ~ \.php$ {
+               proxy_pass http://174.129.163.35;
+        }
 }
